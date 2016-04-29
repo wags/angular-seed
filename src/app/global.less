@@ -96,3 +96,104 @@ colgroup {
     width:70px;
   }
 }
+
+// OC Responsive Tables
+.oc-table-responsive {
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    @media (min-width: @screen-sm-min) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+  }
+
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    white-space: normal;
+  }
+
+  &> tbody {
+    &> tr {
+      &> th {
+        border-top: none;
+        background-color: @table-border-color;
+
+        @media (min-width: @screen-sm-min) {
+          border-top: 1px solid @table-border-color;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  tr {
+    margin-bottom: @padding-large-vertical;
+    border: 1px solid @table-border-color;
+
+    @media (min-width: @screen-sm-min) {
+      // Undo display: block
+      display: table-row;
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  th,
+  td {
+    @media (min-width: @screen-sm-min) {
+      // Undo display: block
+      display: table-cell;
+    }
+  }
+
+  tbody {
+    @media (min-width: @screen-sm-min) {
+      // Undo display: block
+      display: table-row-group;
+    }
+
+    tr {
+      @media (min-width: @screen-sm-min) {
+        // Undo display: block
+        display: table-row;
+      }
+    }
+
+    td {
+      text-align: right;
+
+      @media (min-width: @screen-sm-min) {
+        text-align: initial;
+      }
+    }
+
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      font-size: @font-size-small;
+      color: @gray-light;
+
+      @media (min-width: @screen-sm-min) {
+        // Don’t show data-title labels
+        content: none;
+      }
+    }
+  }
+}
