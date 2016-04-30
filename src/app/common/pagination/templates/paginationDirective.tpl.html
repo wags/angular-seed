@@ -1,11 +1,11 @@
-<div>
-    <div>
+<div class="pagination-buttons">
+    <div class="previous">
         <button ng-click="goToPrevious()" ng-disabled="currentPage === 1">Previous</button>
     </div>
-    <div ng-repeat="page in pageRange">
+    <div ng-repeat="page in pageRange" class="pages">
         <button ng-click="goToPage(page)">{{page}}</button>
     </div>
-    <div>
+    <div class="next">
         <button ng-click="goToNext()" ng-disabled="currentPage === totalPages">Next</button>
     </div>
 </div>
