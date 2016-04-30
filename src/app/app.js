@@ -14,6 +14,7 @@ angular.module( 'orderCloud', [
         'ordercloud-buyer-select',
         'ordercloud-search',
         'ordercloud-assignment-helpers',
+        'ordercloud-pagination-helpers',
         'ordercloud-paging-helpers',
         'ordercloud-auto-id',
         'ordercloud-current-order',
