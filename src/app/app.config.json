@@ -2,5 +2,6 @@
   "appname": "Farced Exposure",
   "ocscope": "FullAccess",
   "clientid": "FA2E05CB-40DE-4210-AF48-AB7BF02B8F0B",
-  "buyerid": "Component_1"
+  "buyerid": "Component_1",
+  "environment": "prod"
 }
