@@ -37,7 +37,8 @@
     "font-awesome": "^4.5.0",
     "angular-snap": "^1.8.5",
     "angular-localforage": "^1.2.5",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "algoliasearch": "^3.14.5"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0"

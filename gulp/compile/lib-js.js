@@ -13,7 +13,7 @@ gulp.task('clean:lib-js', function() {
 
 gulp.task('lib-js', ['clean:lib-js'], function() {
     return gulp
-        .src(mainBowerFiles({filter: '**/*.js'}))
+        .src([].concat(mainBowerFiles({filter: ['!**/algoliasearch/dist/algoliasearch.js', '**/*.js']}), '**/algoliasearch/dist/algoliasearch.angular.js'))
         .pipe(ngAnnotate())
         .pipe(uglify())
         .pipe(concat('lib.js'))

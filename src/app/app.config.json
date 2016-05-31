@@ -1,8 +1,8 @@
 {
-  "appname": "XXXXX",
-  "ocscope": "BuyerReader",
-  "clientid": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX",
-  "buyerid": "XXXXX",
+  "appname": "Max App",
+  "ocscope": "FullAccess",
+  "clientid": "36F84B05-0A25-4272-9B86-CC45E5FD436C",
+  "buyerid": "newbuyer",
   "environment": "prod",
   "base": {
     "left":true,

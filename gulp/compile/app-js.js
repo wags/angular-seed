@@ -40,6 +40,6 @@ gulp.task('app-js', ['clean:app-js'], function() {
         .pipe(ngAnnotate())
         .pipe(concat('app.js'))
         .pipe(rev())
-        .pipe(uglify())
+        .pipe(uglify({mangle:false}))
         .pipe(gulp.dest(config.compile + 'js/'))
 });

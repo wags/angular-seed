@@ -9,10 +9,10 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="" ui-sref="home">{{application.name}}</a>
-        </div>
 
+        </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="BASE_TOP_COLLAPSE">
+        <div class="collapse navbar-collapse pull-right" id="BASE_TOP_COLLAPSE">
             <ul class="nav navbar-nav navbar-right">
                 <li uib-dropdown>
                     <a href="#" uib-dropdown-toggle role="button"><i class="fa fa-user"></i> Account <span class="caret"></span></a>
@@ -26,5 +26,7 @@
             </ul>
             <ordercloud-minicart order="catalog.currentOrder"></ordercloud-minicart>
         </div><!-- /.navbar-collapse -->
+        <algolia-search class="navbar-form col-sm-4 pull-right" search-width="300" max-results="5"></algolia-search>
     </div><!-- /.container-fluid -->
+
 </nav>

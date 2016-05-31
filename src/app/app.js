@@ -20,7 +20,8 @@ angular.module( 'orderCloud', [
     'ordercloud-current-order',
     'ordercloud-address',
     'ordercloud-lineitems',
-    'ordercloud-geography'
+    'ordercloud-geography',
+    'algoliasearch'
 ])
 
     .run( SetBuyerID )
