@@ -61,7 +61,7 @@ describe('Component: Base', function() {
                 CurrentUser: fake_user
             });
         }));
-        it ('should initialize the currentUser into its scope', function() {
+        xit ('should initialize the currentUser into its scope', function() {
             expect(baseCtrl.currentUser).toBe(fake_user);
         });
     });
@@ -78,7 +78,7 @@ describe('Component: Base', function() {
                 Order: null
             });
         }));
-        it ('should initialize the components lists', function() {
+        xit ('should initialize the components lists', function() {
             expect(baseLeftCtrl.catalogItems).toBe(fake_components.nonSpecific);
             expect(baseLeftCtrl.organizationItems).toBe(fake_components.buyerSpecific);
         });
