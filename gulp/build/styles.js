@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     config = require('../../gulp.config'),
-    browserSync = require('browser-sync').get('oc-server'),
+    browserSync = require('browser-sync'),
     del = require('del'),
     less = require('gulp-less'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -28,5 +28,5 @@ gulp.task('styles', ['clean:styles'], function() {
         .pipe(concat('app.css'))
         .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest(config.build + config.appCss))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.get('oc-server').stream());
 });
