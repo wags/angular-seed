@@ -3,6 +3,7 @@ node_js:
   - "6.4.0"
 
 before_script:
+  - git https://github.com/ordercloud-api/angular-components.git ../Components
   - npm install
   - bower install
 
